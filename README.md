@@ -1,2 +1,2 @@
 # YOU CAN ACCESS 
-[ CLICK HERE ](https://buatmu.ferry.web.id)
+[ CLICK HERE ](https://buatmu.ferdev.my.id)
