@@ -1,4 +1,129 @@
-/* Link Css https://feeldreams.github.io/pesanbuatmu/style.css */
+/* ============================================
+   Pesan Buatmu — style.css
+   by Feri Pratama
+   ============================================ */
+
+:root {
+    --warna-bg: rgba(0, 0, 0, 0);
+    --warna-teks: rgb(255, 255, 255);
+    --warna-bingkai: rgb(252,252,252);
+    --bingkai: 5px;
+    --gaya-font: 'Poppins';
+}
+
+/* ── Reset & Base ── */
+*,
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/* ── Love / Heartbeat Icon ── */
+.love {
+    display: inline-block;
+    position: relative;
+    top: 0.1em;
+    font-size: 25px;
+    color: #e74c3c;
+    transform: scale(0.9);
+    animation: love 0.5s infinite linear alternate-reverse;
+    -webkit-animation: love 0.5s infinite linear alternate-reverse;
+    -moz-animation: love 0.5s infinite linear alternate-reverse;
+}
+
+@keyframes love {
+    to { transform: scale(1.2); }
+}
+@-webkit-keyframes love {
+    to { -webkit-transform: scale(1.4); }
+}
+@-moz-keyframes love {
+    to { -moz-transform: scale(1.4); }
+}
+
+/* ── Hover Active on .tb ── */
+.tb:hover:active {
+    color: rgb(42, 242, 74);
+    font-size: 25px;
+}
+
+#weem {
+    margin-top: 320px;
+    text-align: left;
+    font-family: Times;
+}
+
+#bq #kalimat {
+    font-family: Times;
+}
+
+#Tombol {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+#btn-iya,
+#btn-ngga {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#btn-iya {
+    background: linear-gradient(135deg, #e74c3c, #ff6b9d);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.45);
+    animation: denyut 0.6s infinite alternate ease-in-out;
+}
+
+#btn-iya:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.65);
+}
+
+#btn-ngga {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.3);
+    z-index: 9999;
+}
+
+#btn-ngga:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+@keyframes denyut {
+    from { transform: scale(1);    box-shadow: 0 4px 15px rgba(231,76,60,0.4); }
+    to   { transform: scale(1.06); box-shadow: 0 6px 22px rgba(231,76,60,0.7); }
+}
+
+#snow-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+#snow-canvas.active {
+    opacity: 1;
+}
+
+
 @keyframes fanim {
   0% {
     background-position: 0% 0%;
@@ -512,7 +637,7 @@ p {
   100% {
     transform: translateY(100vh);
   }
-}/* Link Css https://feeldreams.github.io/pesanbuatmu/style.css */
+}
 @keyframes fanim {
   0% {
     background-position: 0% 0%;
